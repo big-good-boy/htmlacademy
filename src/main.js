@@ -367,11 +367,13 @@ const createLoadMoreButtonTemplate = () => {
   );
 };
 
-const render = (container, template, place = `beforeEnd`) => {
+const render = (container, template, place = 'beforeEnd') => {
   container.insertAdjacentHTML(place, template);
 };
 
-const siteMainElement = document.querySelector(`.main`);
-const siteHeaderElement = document.querySelector(`.main__control`);
+const siteMainElement = document.querySelector('.main');
+const siteHeaderElement = siteMainElement.querySelector('.main__control');
+const taskListElement = siteMainElement.querySelector('.board__tasks');
+const boardElement = siteMainElement.querySelector('.board');
 
 render(siteHeaderElement, createSiteMenuTemplate());

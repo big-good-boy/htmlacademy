@@ -11,12 +11,6 @@
       "options": {
         "singleQuote": false
       }
-    },
-    {
-      "files": ["main.js"],
-      "options": {
-        "tabWidth": 4
-      }
     }
   ]
 }

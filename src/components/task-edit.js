@@ -146,7 +146,7 @@ ${
 };
 
 export default class TaskEdit {
-  constructor() {
+  constructor(task) {
     this._task = task;
     this._element = null;
   }

@@ -17,16 +17,16 @@ const SHOWING_TASKS_COUNT_BY_BUTTON = 8;
 const renderTask = (taskListElement, task) => {
   const onEditButtonClick = () => {
     taskListElement.replaceChild(
-      TaskEditComponent.getElement(),
-      TaskComponent.getElement()
+      taskEditComponent.getElement(),
+      taskComponent.getElement()
     );
   };
 
   const onEditFormSubmit = (evt) => {
     evt.preventDefault();
     taskListElement.replaceChild(
-      TaskComponent.getElement(),
-      TaskEditComponent.getElement()
+      taskComponent.getElement(),
+      taskEditComponent.getElement()
     );
   };
 
@@ -64,10 +64,10 @@ const renderBoard = (boardComponent, tasks) => {
     renderTask(taskListElement, task);
   });
 
-  const LoadMoreButtonComponent = new LoadMoreButtonComponent();
+  const loadMoreButtonComponent = new LoadMoreButtonComponent();
   render(
     boardComponent.getElement(),
-    LoadMoreButtonComponent.getElement(),
+    loadMoreButtonComponent.getElement(),
     RenderPosition.BEFOREEND
   );
 
@@ -89,8 +89,8 @@ const renderBoard = (boardComponent, tasks) => {
 const siteMainElement = document.querySelector(`.main`);
 const siteHeaderElement = siteMainElement.querySelector(`.main__control`);
 
-const filters = generateFilters();
 const tasks = generateTasks(TASK_COUNT);
+const filters = generateFilters();
 
 render(
   siteHeaderElement,
@@ -102,3 +102,7 @@ render(
   new FilterComponent(filters).getElement(),
   RenderPosition.BEFOREEND
 );
+
+const boardComponent = new BoardComponent();
+render(siteMainElement, boardComponent.getElement(), RenderPosition.BEFOREEND);
+renderBoard(boardComponent, tasks);

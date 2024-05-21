@@ -21,7 +21,7 @@ export const render = (container, component, place) => {
   }
 };
 
-export const replace = (parent, newComponent, oldComponent) => {
+export const replace = (newComponent, oldComponent) => {
   const parentElement = oldComponent.getElement().parentElement;
   const newElement = newComponent.getElement();
   const oldElement = oldComponent.getElement();
@@ -29,7 +29,7 @@ export const replace = (parent, newComponent, oldComponent) => {
   const isExistElements = !!(parentElement && newElement && oldElement);
 
   if (isExistElements && parentElement.contains(oldElement)) {
-    parent.replaceChild(newElement, oldElement);
+    parentElement.replaceChild(newElement, oldElement);
   }
 };
 

@@ -84,5 +84,7 @@ export default class BoardController {
         remove(this._loadMoreButtonComponent);
       }
     });
+
+    this._sortComponent.setSortTypeChangeHandler(() => {});
   }
 }

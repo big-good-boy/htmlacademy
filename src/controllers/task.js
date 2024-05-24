@@ -59,7 +59,7 @@ export default class TaskController {
 
     if (oldTaskEditComponent && oldTaskComponent) {
       replace(this._taskComponent, oldTaskComponent);
-      replace(this.TaskEditComponent, oldTaskEditComponent);
+      replace(this._taskEditComponent, oldTaskEditComponent);
     } else {
       render(this._container, this._taskComponent, RenderPosition.BEFOREEND);
     }

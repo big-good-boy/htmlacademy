@@ -248,7 +248,7 @@ export default class TaskEdit extends AbstractSmartComponent {
 
     this._isDateShowing = !!task.dueDate;
     this._isRepeatingTask = Object.values(task.repeatingDays).some(Boolean);
-    this._activeRepeatingDays = Object.assign({}, task.repeatDays);
+    this._activeRepeatingDays = Object.assign({}, task.repeatingDays);
     this._currentDescription = task.description;
 
     this.rerender();

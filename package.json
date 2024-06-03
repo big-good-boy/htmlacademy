@@ -1,30 +1,32 @@
 {
-	"name": "taskmanager",
-	"version": "11.0.0",
-	"private": true,
-	"description": "Учебный демо-проект «Менеджер задач» от HTML Academy",
-	"scripts": {
-		"build": "webpack",
-		"eslint": "eslint src/**/*.js",
-		"start": "webpack-dev-server --open",
-		"test": "npm run eslint"
-	},
-	"devDependencies": {
-		"css-loader": "^7.1.2",
-		"eslint": "8.56.0",
-		"eslint-config-htmlacademy": "10.0.1",
-		"moment-locales-webpack-plugin": "^1.2.0",
-		"style-loader": "^4.0.0",
-		"webpack": "5.90.1",
-		"webpack-cli": "5.1.4",
-		"webpack-dev-server": "5.0.0"
-	},
-	"engines": {
-		"node": "^21.6.1"
-	},
-	"dependencies": {
-		"flatpickr": "^4.6.13",
-		"he": "^1.2.0",
-		"moment": "^2.30.1"
-	}
+  "name": "taskmanager",
+  "version": "11.0.0",
+  "private": true,
+  "description": "Учебный демо-проект «Менеджер задач» от HTML Academy",
+  "scripts": {
+    "build": "webpack",
+    "eslint": "eslint src/**/*.js",
+    "start": "webpack-dev-server --open",
+    "test": "npm run eslint"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "eslint": "8.56.0",
+    "eslint-config-htmlacademy": "10.0.1",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "style-loader": "^4.0.0",
+    "webpack": "5.90.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.0"
+  },
+  "engines": {
+    "node": "^21.6.1"
+  },
+  "dependencies": {
+    "chart.js": "2.9.3",
+    "chartjs-plugin-datalabels": "0.7.0",
+    "flatpickr": "^4.6.13",
+    "he": "^1.2.0",
+    "moment": "^2.30.1"
+  }
 }
